@@ -22,5 +22,6 @@ Route::group(['prefix' => 'u'], function(){
 
 //Routes to categories: 
 Route::group(['prefix' => 'c'], function(){
-	Route::get('getCategories', 'CategoryController@getAllCategories'); 
+	Route::post('getCategories', 'CategoryController@getAllCategories'); 
+	Route::post('getSubCategories', "CategoryController@getSubCategories"); 
 }); 	
