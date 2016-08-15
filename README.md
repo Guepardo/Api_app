@@ -2,6 +2,48 @@
 
 Documentação da api de uma pequena aplicação.
 
+## Usuarios
+### POST \u\create
+Parâmetro:
+```js
+{
+    name: "Allyson Maciel", 
+    email: "bsinet@hotmail.com", 
+    password: "master", 
+    password_confirmation: "master", 
+    cpf: "70043253233", 
+    phone: "991017323"
+}
+```
+Exemplo de saída:
+```js
+{status : true }
+```
+
+## Autenticação
+### POST \auth\getToken
+Parâmetro:
+```js
+{
+    email : "bsinet@hotmail.com", 
+    password : "master"
+}
+```
+Exemplo de saída:
+```js
+{
+  "id": 3,
+  "email": "bsinet@hotmail.com",
+  "name": "Allyson Maciel Guimarães",
+  "api_key": "$2y$10$4OqvPwARSwwNw9K6M5j57eCTQEDGV.z8xk5lcg24DnJmhYJLJ6VRO",
+  "cpf": "70043253233",
+  "phone": "991017323",
+  "created_at": "2016-08-15 14:20:38",
+  "updated_at": "2016-08-15 14:32:20",
+  "last_login": null
+}
+```
+
 ## Categorias
 ### POST \c\getAllCategories
 Parâmetro:

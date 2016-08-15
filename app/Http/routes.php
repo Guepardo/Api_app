@@ -13,12 +13,15 @@
 Route::get('/', function(){
 	return "working"; 
 }); 
+//Routes to Auth: 
+Route::group(['prefix' => 'auth'], function(){
+	Route::post('getToken', 'AuthenticationController@getToken'); 
+}); 
 
 //Routes to users; 
 Route::group(['prefix' => 'u'], function(){
 	Route::post('create', 'UserController@create'); 
 }); 
-
 
 //Routes to categories: 
 Route::group(['prefix' => 'c'], function(){
