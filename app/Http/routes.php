@@ -22,6 +22,12 @@ Route::group(['prefix' => 'u'], function(){
 
 //Routes to categories: 
 Route::group(['prefix' => 'c'], function(){
-	Route::post('getCategories', 'CategoryController@getAllCategories'); 
+	Route::post('getCategories'   , 'CategoryController@getAllCategories'); 
 	Route::post('getSubCategories', "CategoryController@getSubCategories"); 
 }); 	
+
+//Routes to skill: 
+Route::group(['prefix' => 's'], function(){
+	Route::post('getSkillsByCategory', 'SkillController@getSkillByCategory');
+	Route::post('getSkillsByMatch', 'SkillController@getSkillsByMatch'); 
+}); 

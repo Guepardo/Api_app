@@ -10,4 +10,9 @@ class Category extends Model{
  	public function subCategories(){
  		return $this->hasMany('App\SubCategory'); 
  	}
+
+ 	public function skills(){
+ 		return $this->hasMany('App\Skill'); 
+ 	}
+ 	
 }
