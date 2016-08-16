@@ -174,3 +174,78 @@ Exemplo de saída:
   }
 ]
 ```
+
+## Jobs
+### POST \j\publish
+Parâmetro:
+```js
+{
+    "name" : "Programação de um aplicativo", 
+    "description" : "Programação de um aplicativo web com interfaces ricas e usando node.js. A persistência da API deve ser feita com banco de dados não relacionais para facilitar o Big Data posteriormente.", 
+    "time_left" : "30", 
+    "sub_category_id" : "1", 
+    "skills_id": [1, 5, 6]
+}
+```
+Exemplo de saída:
+```js
+{status : true }
+```
+
+### POST \j\getJobById
+Parâmetro:
+```js
+{ "id" : "1" }
+```
+Exemplo de saída:
+```js
+{
+  "id": 1,
+  "name": "Programação de um aplicativo",
+  "description": "Programação de um aplicativo web com interfaces ricas e usando node.js. A persistência da API deve ser feita com banco de dados não relacionais para facilitar o Big Data posteriormente.",
+  "time_left": "0000-00-00 00:00:00",
+  "interest": 0,
+  "sub_category_id": 1,
+  "user_id": 3,
+  "created_at": "2016-08-16 04:12:11",
+  "updated_at": "2016-08-16 04:12:11",
+  "skills": [
+    {
+      "id": 1,
+      "name": "Node.js",
+      "description": "N\\A",
+      "category_id": 1,
+      "pivot": {
+        "job_id": 1,
+        "skill_id": 1,
+        "created_at": "2016-08-16 04:12:11",
+        "updated_at": "2016-08-16 04:12:11"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Desenvolvimento de APIs",
+      "description": "N\\A",
+      "category_id": 1,
+      "pivot": {
+        "job_id": 1,
+        "skill_id": 5,
+        "created_at": "2016-08-16 04:12:11",
+        "updated_at": "2016-08-16 04:12:11"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Desenvolvimento Web",
+      "description": "N\\A",
+      "category_id": 1,
+      "pivot": {
+        "job_id": 1,
+        "skill_id": 6,
+        "created_at": "2016-08-16 04:12:11",
+        "updated_at": "2016-08-16 04:12:11"
+      }
+    }
+  ]
+}
+```

@@ -34,3 +34,9 @@ Route::group(['prefix' => 's'], function(){
 	Route::post('getSkillsByCategory', 'SkillController@getSkillByCategory');
 	Route::post('getSkillsByMatch', 'SkillController@getSkillsByMatch'); 
 }); 
+
+//Routes to jobs; 
+Route::group(['prefix' => 'j'], function(){
+	Route::post('publish', 'JobController@publish'); 
+	Route::post('getJobById', 'JobController@getJobById'); 	
+}); 
