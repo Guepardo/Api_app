@@ -272,12 +272,45 @@ Exemplo de saída:
 Parâmetro:
 ```js
 {
-    "comment" : "Essa é a minha proposta para fazer esse serviço.", 
-    "budget" : "14000", 
     "job_id" : "1"
 }
 ```
 Exemplo de saída:
 ```js
-{status : true }
+[
+  {
+    "user_id": 3,
+    "job_id": 1,
+    "comment": "Essa é a minha proposta para fazer esse serviço.",
+    "created_at": "2016-08-17 03:08:51",
+    "updated_at": "2016-08-17 03:08:51",
+    "budget": 14000,
+    "user": {
+      "id": 3,
+      "email": "bsinet@hotmail.com",
+      "name": "Allyson Maciel Guimarães",
+      "phone": "991017323",
+      "created_at": "2016-08-15 14:20:38",
+      "updated_at": "2016-08-17 02:46:34",
+      "last_login": null
+    }
+  },
+  {
+    "user_id": 4,
+    "job_id": 1,
+    "comment": "Oi, tudo bem? Eu quero fazer esse trabalho para você.",
+    "created_at": "2016-08-17 03:12:05",
+    "updated_at": "2016-08-17 03:12:05",
+    "budget": 9000,
+    "user": {
+      "id": 4,
+      "email": "marcos@hotmail.com",
+      "name": "Marcos Silva",
+      "phone": "991017323",
+      "created_at": "2016-08-15 14:21:58",
+      "updated_at": "2016-08-15 14:21:58",
+      "last_login": null
+    }
+  }
+]
 ```
