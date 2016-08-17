@@ -28,6 +28,8 @@ class AuthenticationController extends Controller{
 		$user->api_key = Hash::make($password + time() ); 
 		$user->save(); 
 
-		return $user; 
+		$msg = ['token' => $user->api_key]; 
+
+		return [ 'status' => true, 'msg' => $msg ]; 
 	}
 }

@@ -40,3 +40,8 @@ Route::group(['prefix' => 'j'], function(){
 	Route::post('publish', 'JobController@publish'); 
 	Route::post('getJobById', 'JobController@getJobById'); 	
 }); 
+
+//Routes to apllies: 
+Route::group(['prefix' => 'a'], function(){
+	Route::post('apply', 'ApplyController@apply'); 
+}); 
