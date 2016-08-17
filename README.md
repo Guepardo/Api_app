@@ -204,11 +204,11 @@ Exemplo de saída:
   "name": "Programação de um aplicativo",
   "description": "Programação de um aplicativo web com interfaces ricas e usando node.js. A persistência da API deve ser feita com banco de dados não relacionais para facilitar o Big Data posteriormente.",
   "time_left": "0000-00-00 00:00:00",
-  "interest": 0,
+  "interest": 3,
   "sub_category_id": 1,
   "user_id": 3,
   "created_at": "2016-08-16 04:12:11",
-  "updated_at": "2016-08-16 04:12:11",
+  "updated_at": "2016-08-17 02:42:00",
   "skills": [
     {
       "id": 1,
@@ -246,6 +246,15 @@ Exemplo de saída:
         "updated_at": "2016-08-16 04:12:11"
       }
     }
-  ]
+  ],
+  "user": {
+    "id": 3,
+    "email": "bsinet@hotmail.com",
+    "name": "Allyson Maciel Guimarães",
+    "phone": "991017323",
+    "created_at": "2016-08-15 14:20:38",
+    "updated_at": "2016-08-15 14:32:20",
+    "last_login": null
+  }
 }
 ```

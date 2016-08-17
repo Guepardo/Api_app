@@ -40,7 +40,12 @@ class JobController extends Controller{
 		$id = $request->id; 
 
 		$job = Job::find($id); 
+		
 		$job->skills; 
+		$job->user; 
+		$job->interest++; 
+
+		$job->save(); 
 
 		return $job; 
 	}
