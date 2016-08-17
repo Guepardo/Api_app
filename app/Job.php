@@ -16,4 +16,8 @@ class Job extends Model{
     public function user(){
     	return $this->belongsTo('App\User');
     }
+
+    public function applies(){
+    	return $this->hasMany('App\Apply'); 
+    }
 }

@@ -43,5 +43,6 @@ Route::group(['prefix' => 'j'], function(){
 
 //Routes to apllies: 
 Route::group(['prefix' => 'a'], function(){
-	Route::post('apply', 'ApplyController@apply'); 
+	Route::post('apply'      , 'ApplyController@apply'); 
+	Route::post('getJobApply', 'ApplyController@getJobApply'); 
 }); 

@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests; 
 
 use App\Apply; 
+use App\Job; 
 
 class ApplyController extends Controller{
 	public function apply(Request $request){
@@ -24,5 +25,21 @@ class ApplyController extends Controller{
 		$apply->save(); 
 
 		return ['status' => true ]; 
+	}
+
+	public function getJobApply(Request $request){
+		$this->validate($request, [
+			'job_id' => 'required'
+		]); 
+
+
+		$job_id = $request->job_id; 
+
+		$job = Job::find($job_id); 
+
+		foreach( $job->applies as $apply )
+			$apply->user; 
+		
+		return $job->applies; 
 	}
 }

@@ -254,16 +254,27 @@ Exemplo de saída:
 }
 ```
 ## Aplicações aos trabalhos
-### POST \u\create
+### POST \a\apply
 Parâmetro:
 ```js
 {
-    name: "Allyson Maciel", 
-    email: "bsinet@hotmail.com", 
-    password: "master", 
-    password_confirmation: "master", 
-    cpf: "70043253233", 
-    phone: "991017323"
+    "comment" : "Essa é a minha proposta para fazer esse serviço.", 
+    "budget" : "14000", 
+    "job_id" : "1"
+}
+```
+Exemplo de saída:
+```js
+{status : true }
+```
+
+### POST \a\getJobApply
+Parâmetro:
+```js
+{
+    "comment" : "Essa é a minha proposta para fazer esse serviço.", 
+    "budget" : "14000", 
+    "job_id" : "1"
 }
 ```
 Exemplo de saída:
